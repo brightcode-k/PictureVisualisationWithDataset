@@ -2,6 +2,7 @@ from PIL import Image
 from tkinter import Tk, PhotoImage, Canvas, NW
 
 
+
 def algoritm (txtname, imagename, mode, size = (960,540)):
     size = size[::-1] if format == 1 else size
     img = Image.new("RGB", size, "white")
@@ -21,13 +22,13 @@ def main():
     txtname = input("Enter dataset name (DS7.txt):\n")
     imagename = input("Enter name of the new image:\n")
     mode = (int(input("1. Direct dataset visualisation \n"
-                      "2. Dataset visualisation with changed coordinates\n"
-                      "3. Dataset visualisation with changed coordinates and normal visualisation\n"
+                      "2. Dataset_visualisation visualisation with changed coordinates\n"
+                      "3. Dataset_visualisation visualisation with changed coordinates and normal visualisation\n"
                       "\nEnter 1, 2 or 3\n")))
     while mode not in (1, 2, 3):
         mode = (int(input("1. Direct dataset visualisation \n"
-                          "2. Dataset visualisation with changed coordinates\n"
-                          "3. Dataset visualisation with changed coordinates and normal visualisation\n"
+                          "2. Dataset_visualisation visualisation with changed coordinates\n"
+                          "3. Dataset_visualisation visualisation with changed coordinates and normal visualisation\n"
                           "\nEnter 1, 2 or 3\n")))
     size = algoritm(txtname, imagename, mode)
     windowMain = Tk()
